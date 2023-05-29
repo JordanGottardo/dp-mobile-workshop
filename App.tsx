@@ -9,7 +9,12 @@ import { RestLink } from 'apollo-link-rest';
 const Stack = createNativeStackNavigator();
 
 const restLink = new RestLink({
-  uri: 'https://api.chucknorris.io/jokes',
+  uri: 'https://api.themoviedb.org/3/',
+  headers: {
+    accept: 'application/json',
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYjhiY2Q4MWJjMTc1ZTYwNDViMzNiOWZmNmUwZDUzOCIsInN1YiI6IjY0NzRiNjZlY2MyNzdjMDBmOWY1MjA2OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H8NBFrcl8hL1t1mH-mRx8bfYdwevLedTJBibxXPj_rw',
+  },
 });
 const client = new ApolloClient({
   cache: new InMemoryCache(),

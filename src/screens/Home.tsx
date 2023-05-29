@@ -1,23 +1,23 @@
 import React from 'react';
 
 import { StatusBar } from 'expo-status-bar';
-import { Text, Button } from 'react-native';
+import { Text } from 'react-native';
 import styled from 'styled-components/native';
 import { useQuery } from '@apollo/client';
-import { GET_RANDOM_JOKE } from '~/apollo/queries/joke';
+import { GET_MOVIES } from '~/apollo/queries/getMovies';
 
 export const Home = () => {
-  const { data, refetch } = useQuery(GET_RANDOM_JOKE);
+  const { data } = useQuery(GET_MOVIES, {
+    variables: { input: 'star wars' },
+  });
 
-  const newJoke = data?.person?.value ?? '';
+  console.log(data);
 
   return (
     <StyledContainer>
-      <Text>Chuck Norris Joke:</Text>
-      <Text>{newJoke}</Text>
+      <Text>The Movie Searcher</Text>
+      {/* <Text>{newJoke}</Text> */}
       <StatusBar style="auto" />
-
-      <Button title="New joke, please" onPress={() => refetch()} />
     </StyledContainer>
   );
 };
