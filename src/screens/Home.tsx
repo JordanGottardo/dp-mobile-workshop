@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { StatusBar } from 'expo-status-bar';
 import { Text } from 'react-native';
 import styled from 'styled-components/native';
