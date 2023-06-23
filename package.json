@@ -10,11 +10,15 @@
     "lint": "eslint . --ext .tsx,.ts --fix"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.16",
     "@expo/webpack-config": "^18.0.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
+    "apollo-link-rest": "^0.9.0",
     "expo": "~48.0.11",
     "expo-status-bar": "~1.4.4",
+    "graphql": "^16.7.1",
+    "lodash": "^4.17.21",
     "qs": "^6.11.2",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
@@ -26,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@types/lodash": "^4.14.195",
     "@types/react": "~18.0.14",
     "@types/styled-components": "^5.1.26",
     "@types/styled-components-react-native": "^5.2.1",
